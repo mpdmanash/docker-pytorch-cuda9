@@ -9,9 +9,9 @@ libswscale-dev libusb-1.0-0 libgtkmm-2.4-dev --fix-missing
 
 apt-get -y install python3-tk
 
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-py37_22.11.1-1-Linux-x86_64.sh 
 
-bash Miniconda3-latest-Linux-x86_64.sh -p /miniconda -b
+bash Miniconda3-py37_22.11.1-1-Linux-x86_64.sh -p /miniconda -b
 
 PATH=/miniconda/bin:${PATH}
 

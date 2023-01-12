@@ -17,7 +17,7 @@ GPU=0
 echo "launching docker image $DOCKER_NAME at tag $TAG as $DOCKER_CONTAINER_NAME"
 
 echo "running docker"
-/usr/bin/nvidia-docker run --privileged -d -e "DISPLAY=unix:0.0" -v "/tmp/.X11-unix:/tmp/.X11-unix:rw"  -v "/tmp:/tmp:rw" -v "/dev:/dev:rw" \
+docker run --privileged -d -e "DISPLAY=unix:0.0" --gpus '"device=0"' -v "/tmp/.X11-unix:/tmp/.X11-unix:rw"  -v "/tmp:/tmp:rw" -v "/dev:/dev:rw" \
     -h ${DOCKER_CONTAINER_NAME} \
     --env DOCKER_NAME=$DOCKER_NAME \
     --name $DOCKER_CONTAINER_NAME $DOCKER_NAME:$TAG \
